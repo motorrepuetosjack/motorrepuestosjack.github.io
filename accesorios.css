@@ -1,0 +1,253 @@
+*{
+    padding: 0%;
+    margin: 0px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+
+}
+html{
+    background:#FFFFFF;}
+body{
+    height: 750px;
+    width: 750;
+    background:#FFFFFF;
+    margin:7px 7px 7px 7px;
+}
+header{
+    height: 60px;
+    background:#3333336b;
+    padding: 0 20px;
+    color: #020202;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    image-rendering: crisp-edges;
+  
+}
+img.logo-img {
+    height: 50px
+}
+.logo{
+    display: flex;
+    text-transform: uppercase;
+    color: #000000;
+    font-weight: 200;
+    justify-content: left;
+}
+.menu a{
+color: #000000;
+text-transform: uppercase;
+text-decoration: none;
+padding: 0 10px;
+transition: 0.4s
+
+}
+.mostrar-menu,
+.esconder-menu{
+    font-size: 40px;
+    cursor: pointer;
+    display: none;
+    transition: 0.4s;
+
+}
+.mostrar-menu{
+    order: 1;
+
+}
+.menu a:hover,
+.mostrar-menu:hover,
+.esconder-menu:hover{
+    color:#00C957;
+
+}
+#check{
+    display: none;
+
+}
+.banner{
+    height: 10%;
+    background:rgb(117, 0, 128) ;
+    margin:7px 7px 7px 7px;
+}
+.img{
+    width: 100%;
+    height: 50%;
+}
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  .box {
+    position: relative;
+    width: calc(25% - 20px);
+    padding-bottom: 25%; 
+    margin-bottom: 20px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  .box img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+    transition: opacity 0.3s ease;
+  }
+  .box-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.6); 
+    opacity: 0;
+    border-radius: 8px;
+    transition: opacity 0.3s ease;
+  }
+  
+  .box p {
+    color: #fff;
+    font-size: 16px;
+    text-align: center;
+  }
+  .box:hover {
+    transform: scale(1.05); 
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); 
+  }
+  
+  .box:hover img {
+    opacity: 0.7; }
+  
+  .box:hover .box-overlay {
+    opacity: 1;
+  }
+  
+footer{
+    height: 200px;
+    background: rgb(0, 0, 0);
+    margin:7px 7px 7px 7px;
+}
+.separator {
+  width: 100%;
+  text-align: center;
+}
+
+.separator hr {
+  border: none;
+  border-top: 1px solid #333; 
+  margin: 10px 0;
+}
+.footer {
+  background-color: rgb(0, 0, 0);
+  color: #ffffff;
+  padding: 20px 0;
+  margin-top: 20px;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-logo img {
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+}
+
+.footer-logo h2 {
+  font-size: 20px;
+  margin: 0;
+}
+
+ .footer-links ul {
+    background-color:#DC143C;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .footer-links li {
+    display: inline-block;
+    margin-right: 20px;
+  }
+  
+  .footer-links li:last-child {
+    margin-right: 0;
+  }
+  
+  .footer-links a {
+    color: #000000;
+    text-decoration: none;
+  }
+
+.footer-contact h3 {
+  font-size: 18px;
+  margin: 0;
+  margin-bottom: 10px;
+}
+
+.footer-contact p {
+  margin: 0;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 10px;
+}
+@media(max-width:480px){
+    .box {
+        width: calc(50% - 20px);
+      }
+    
+    .mostrar-menu,
+    .esconder-menu{
+    display:block;
+    }
+    .menu{
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: #333333;
+    right: -100%;
+    top: 0;
+    text-align: center;
+    padding: 100px 0px;
+    z-index: 100;
+    transition: 0.8s;
+    }
+    .menu a{
+    display: block;
+    padding: 20px;
+
+    }
+    .esconder-menu{
+    position: absolute;
+    top: 40px;
+    right: 40px;
+    }
+    #check:checked ~.menu{
+        right: 0;
+    }
+    .banner{
+      height: 10%;
+      background:rgb(117, 0, 128) ;
+      margin:7px 7px 7px 7px;
+  }
+  .img{
+      width: 100%;
+      height: 40%;
+  }
+}
